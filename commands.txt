@@ -1,0 +1,7 @@
+NOTION_TOKEN='v02:user_token_or_cookies:eg8_k7cuZgHUdYG57fE1onOHGxH7auiq3BQ7VQlL4ubmqrw-szalzFNuSDJkqIuVe4B6Io9zyPexDU-sA6JG7kN1QDZyxVuexvrymtRqsw2UA6MPk3_4tY9R5ZIj8ntZSnjB' BLOG_INDEX_ID='38f40afdb6014d9ab279578d664a716e' node scripts/create-table.js
+NODE_OPTIONS=--openssl-legacy-provider npm run dev
+NODE_OPTIONS=--openssl-legacy-provider yarn build
+NODE_OPTIONS=--openssl-legacy-provider yarn start
+
+
+NODE_OPTIONS=--openssl-legacy-provider yarn build && yarn start
