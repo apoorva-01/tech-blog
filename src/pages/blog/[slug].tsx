@@ -103,7 +103,7 @@ const RenderPost = ({ post, redirect, preview }) => {
     // client navigation
     if (post && post.hasTweet) {
       if ((window as any)?.twttr?.widgets) {
-        ;(window as any).twttr.widgets.load()
+        ; (window as any).twttr.widgets.load()
       } else if (!document.querySelector(`script[src="${twitterSrc}"]`)) {
         const script = document.createElement('script')
         script.async = true
@@ -136,6 +136,13 @@ const RenderPost = ({ post, redirect, preview }) => {
     )
   }
 
+
+  const date = new Date(post.Date);
+  const formattedDate = date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
   return (
     <>
       <Header titlePre={post.Page} />
@@ -150,21 +157,26 @@ const RenderPost = ({ post, redirect, preview }) => {
           </div>
         </div>
       )}
+
+
+
+
       <div className={blogStyles.post}>
-        <h1>{post.Page || ''}</h1>
+        {post.Tags.length > 0 && (
+          <div className={blogStyles.tags}>
+            {post.Tags.split(',').map(tag => (
+                 <Link key={tag} href={`/tags/${tag.toLowerCase()}`}><p className={blogStyles.tagchip}>{tag}</p></Link>
+            ))}
+          </div>
+        )}
+        <h1 style={{ fontSize: "2em" }} >{post.Page || ''}</h1>
         {/* {post.Authors.length > 0 && (
           <div className="authors">By: {post.Authors.join(' ')}</div>
         )} */}
+
         {/* Added by me */}
-        {post.Tags.length > 0 && (
-                    <div className={blogStyles.tags}>
-                      {post.Tags.split(',').map(tag => (
-                        <div key={tag}><p className={blogStyles.tagchip}>{tag}</p></div>
-                      ))}
-                    </div>
-                  )}
         {post.Date && (
-          <div className="posted">Posted: {getDateStr(post.Date)}</div>
+          <div className="posted" style={{ fontSize: "0.7em",marginTop: "0.5em"}} >Posted: {formattedDate}</div>
         )}
 
         <hr />
@@ -211,12 +223,12 @@ const RenderPost = ({ post, redirect, preview }) => {
                       item.children,
                       item.nested.length > 0
                         ? React.createElement(
-                            components.ul || 'ul',
-                            { key: item + 'sub-list' },
-                            item.nested.map((nestedId) =>
-                              createEl(listMap[nestedId])
-                            )
+                          components.ul || 'ul',
+                          { key: item + 'sub-list' },
+                          item.nested.map((nestedId) =>
+                            createEl(listMap[nestedId])
                           )
+                        )
                         : null
                     )
                   return createEl(listMap[itemId])
@@ -310,11 +322,10 @@ const RenderPost = ({ post, redirect, preview }) => {
               const roundFactor = Math.pow(10, 2)
               // calculate percentages
               const width = block_width
-                ? `${
-                    Math.round(
-                      (block_width / baseBlockWidth) * 100 * roundFactor
-                    ) / roundFactor
-                  }%`
+                ? `${Math.round(
+                  (block_width / baseBlockWidth) * 100 * roundFactor
+                ) / roundFactor
+                }%`
                 : block_height || '100%'
 
               const isImage = type === 'image'
@@ -322,19 +333,19 @@ const RenderPost = ({ post, redirect, preview }) => {
               const useWrapper = block_aspect_ratio && !block_height
               const childStyle: CSSProperties = useWrapper
                 ? {
-                    width: '100%',
-                    height: '100%',
-                    border: 'none',
-                    position: 'absolute',
-                    top: 0,
-                  }
+                  width: '100%',
+                  height: '100%',
+                  border: 'none',
+                  position: 'absolute',
+                  top: 0,
+                }
                 : {
-                    width,
-                    border: 'none',
-                    height: block_height,
-                    display: 'block',
-                    maxWidth: '100%',
-                  }
+                  width,
+                  border: 'none',
+                  height: block_height,
+                  display: 'block',
+                  maxWidth: '100%',
+                }
 
               let child = null
 

@@ -9,44 +9,24 @@ import Scroll from './svgs/scroll'
 
 const features = [
   {
-    text: 'Blazing fast',
-    icon: Lightning,
+    text: 'Linux',
+    path: './linux.svg',
   },
   {
-    text: 'JAMstack based',
-    icon: Jamstack,
+    text: 'Git',
+    path:  './git.svg'
   },
   {
-    text: 'Always available',
-    icon: Wifi,
-  },
-  {
-    text: 'Customizable',
-    icon: Edit,
-  },
-  {
-    text: 'Incremental SSG',
-    icon: Plus,
-  },
-  {
-    text: 'MIT Licensed',
-    icon: Scroll,
-  },
-  {
-    text: 'Edit via Notion',
-    icon: Notion,
-  },
-  {
-    text: 'Great scores',
-    icon: Lighthouse,
-  },
+    text: 'Bash',
+    path: './bash.svg'
+  }
 ]
 
 const Features = () => (
   <div className="features">
-    {features.map(({ text, icon: Icon }) => (
+    {features.map(({ text, path: Icon }) => (
       <div className="feature" key={text}>
-        {Icon && <Icon height={24} width={24} />}
+        <img style={{height:30}} src={Icon} alt="apoorva" />
         <h4>{text}</h4>
       </div>
     ))}

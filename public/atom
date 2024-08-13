@@ -4,13 +4,43 @@
     <subtitle>Blog</subtitle>
     <link href="/atom" rel="self" type="application/rss+xml"/>
     <link href="/" />
-    <updated>2024-08-09T13:42:02.851Z</updated>
+    <updated>2024-08-13T10:02:28.956Z</updated>
     <id>My Notion Blog</id>
     <entry>
+      <id>/blog/git-create-add-ssh</id>
+      <title>Git Create &amp; Add SSH</title>
+      <link href="/blog/git-create-add-ssh"/>
+      <updated>2024-08-09T18:30:00.738Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/git-create-add-ssh">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>046 __Apoorva Verma</name></author>
+    </entry>
+    <entry>
+      <id>/blog/how-to-create-github-repository</id>
+      <title>How to create Github Repository?</title>
+      <link href="/blog/how-to-create-github-repository"/>
+      <updated>2024-08-09T18:30:00.742Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/how-to-create-github-repository">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>046 __Apoorva Verma</name></author>
+    </entry>
+    <entry>
       <id>/blog/bash-comments</id>
-      <title>Bash Comments</title>
+      <title>Comments in Bash</title>
       <link href="/blog/bash-comments"/>
-      <updated>2024-08-07T18:30:00.051Z</updated>
+      <updated>2024-08-07T18:30:00.742Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           
@@ -22,10 +52,40 @@
       <author><name>046 __Apoorva Verma</name></author>
     </entry>
     <entry>
+      <id>/blog/git-add-commit-commands</id>
+      <title>Git Add &amp; Commit Commands</title>
+      <link href="/blog/git-add-commit-commands"/>
+      <updated>2024-08-09T18:30:00.742Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/git-add-commit-commands">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>046 __Apoorva Verma</name></author>
+    </entry>
+    <entry>
+      <id>/blog/git-staging-environment</id>
+      <title>Git Staging Environment</title>
+      <link href="/blog/git-staging-environment"/>
+      <updated>2024-08-09T18:30:00.743Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/git-staging-environment">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>046 __Apoorva Verma</name></author>
+    </entry>
+    <entry>
       <id>/blog/what-is-bash</id>
       <title>What is Bash?</title>
       <link href="/blog/what-is-bash"/>
-      <updated>2024-08-07T18:30:00.051Z</updated>
+      <updated>2024-08-07T18:30:00.743Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           
@@ -37,10 +97,25 @@
       <author><name>046 __Apoorva Verma</name></author>
     </entry>
     <entry>
+      <id>/blog/git-branches-list-create-switch</id>
+      <title>Git Branches: List, Create, Switch to, Merge, Push, &amp; Delete</title>
+      <link href="/blog/git-branches-list-create-switch"/>
+      <updated>2024-08-09T18:30:00.743Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/git-branches-list-create-switch">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>046 __Apoorva Verma</name></author>
+    </entry>
+    <entry>
       <id>/blog/bash-scripting</id>
-      <title>How to Write Bash Scripts?</title>
+      <title>How to Write Your First Bash Scripts?</title>
       <link href="/blog/bash-scripting"/>
-      <updated>2024-08-07T18:30:00.051Z</updated>
+      <updated>2024-08-07T18:30:00.743Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           
@@ -52,10 +127,25 @@
       <author><name>046 __Apoorva Verma</name></author>
     </entry>
     <entry>
+      <id>/blog/git-setup</id>
+      <title>Git Setup</title>
+      <link href="/blog/git-setup"/>
+      <updated>2024-08-09T18:30:00.743Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/git-setup">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>046 __Apoorva Verma</name></author>
+    </entry>
+    <entry>
       <id>/blog/git-error-fix-please-make-sure-you-have-the-correct-access-rights</id>
       <title>[Error Fix] Git - Please make sure you have the correct access rights</title>
       <link href="/blog/git-error-fix-please-make-sure-you-have-the-correct-access-rights"/>
-      <updated>2024-08-08T18:30:00.053Z</updated>
+      <updated>2024-08-08T18:30:00.744Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           
@@ -70,7 +160,7 @@
       <id>/blog/linux-file-types</id>
       <title>Linux File Types</title>
       <link href="/blog/linux-file-types"/>
-      <updated>2024-08-07T18:30:00.053Z</updated>
+      <updated>2024-08-07T18:30:00.744Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           

@@ -45,10 +45,14 @@ export async function getStaticProps({ preview }) {
     },
     revalidate: 10,
   }
+
 }
+
+
 
 const Index = ({ posts = [], preview }) => {
   console.log("posts", posts)
+
   return (
     <>
       <Header titlePre="Blog" />
@@ -63,11 +67,21 @@ const Index = ({ posts = [], preview }) => {
           </div>
         </div>
       )}
+
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
+        {/* If No Posts Found */}
         {posts.length === 0 && (
           <p className={blogStyles.noPosts}>There are no posts yet</p>
         )}
+
+        {/* Listing Posts */}
         {posts.map((post) => {
+          const date = new Date(post.Date);
+          const formattedDate = date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+          });
           return (
             <div className={blogStyles.postPreview} key={post.Slug}>
 
@@ -78,23 +92,15 @@ const Index = ({ posts = [], preview }) => {
                     <span className={blogStyles.draftBadge}>Draft</span>
                   )}
 
-                  <div>»</div>
-
-                  {/* Added by me */}
-                  {post.Tags.length > 0 && (
-                    <div className={blogStyles.tags}>
-                      {post.Tags.split(',').map(tag => (
-                        <div key={tag}><p className={blogStyles.tagchip}>{tag}</p></div>
-                      ))}
-                    </div>
-                  )}
+                  <div className={blogStyles.arrow} >»</div>
 
                   <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                    <a>{post.Page}</a>
+                    <a style={{ fontSize: "0.8em", fontWeight: 600 }} >{post.Page}</a>
                   </Link>
+
                   {post.Date && (
-                    <div className={blogStyles.dateContainer}>
-                      {getDateStr(post.Date)}
+                    <div className={blogStyles.dateContainer} style={{ fontSize: "0.7em", fontWeight: 400 }}>
+                      {formattedDate}
                     </div>
                   )}
 
@@ -106,9 +112,14 @@ const Index = ({ posts = [], preview }) => {
                 <div className="authors">By: {post.Authors.join(' ')}</div>
               )} */}
 
-
-
-
+              {/* Tags Added by me */}
+              {post.Tags.length > 0 && (
+                <div className={blogStyles.tags}>
+                  {post.Tags.split(',').map(tag => (
+                    <Link key={tag} href={`/tags/${tag.toLowerCase()}`}><p className={blogStyles.tagchip}>{tag}</p></Link>
+                  ))}
+                </div>
+              )}
               {/* <p>
                 {(!post.preview || post.preview.length === 0) &&
                   'No preview available'}
@@ -120,6 +131,9 @@ const Index = ({ posts = [], preview }) => {
           )
         })}
       </div>
+
+
+
     </>
   )
 }

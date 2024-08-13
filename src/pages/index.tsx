@@ -1,5 +1,4 @@
 import Header from '../components/header'
-import ExtLink from '../components/ext-link'
 import Features from '../components/features'
 import Contact from '../components/contact'
 import sharedStyles from '../styles/shared.module.css'
@@ -18,6 +17,7 @@ export default function Index() {
         <h2>
         A personal blog focused on Software Development
         </h2>
+     
         <Contact/>
         {/* <Features /> */}
 

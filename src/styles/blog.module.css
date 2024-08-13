@@ -42,12 +42,7 @@
   border: 1px solid black;
   cursor: pointer;
 }
-.arrow {
-  position: absolute;
-  left: 0;
-  content: "»";
-  color: rgb(var(--color-text-muted));
-}
+
 
 .titleContainer {
   display: flex;
@@ -59,15 +54,17 @@
   font-size: medium;
   margin-left: auto; /* Pushes the date to the far right */
 }
-.tags{
-  margin: 5px 5px 5px 0;
+.tags {
+  display: flex; /* Use flexbox to lay out tags horizontally */
+  flex-wrap: wrap; /* Allow tags to wrap to the next line if needed */
+  gap: 4px; /* Adds space between tags */
 }
+
 /* Individual tag chip styling */
 .tagchip {
   background-color: #e0e0e0; /* Light gray background for tags */
-  border-radius: 12px; /* Rounded corners */
-  padding: 4px 12px; /* Padding inside the tag */
-  font-size: 14px; /* Font size for the tag text */
+  padding: 2px 6px; /* Padding inside the tag */
+  font-size: 12px; /* Font size for the tag text */
   color: #333; /* Text color for the tag */
   display: inline-block; /* Makes the tag fit content */
   cursor: pointer; /* Changes the cursor to a pointer on hover */
@@ -75,8 +72,15 @@
 }
 
 .tagchip:hover {
-  background-color: #bdbdbd; /* Darker gray on hover */
+  background-color: #908f8f; /* Darker gray on hover */
 }
+.arrow {
+  left: 0;
+  margin-right: 10px;
+  content: "»";
+  color: rgb(var(--color-text-muted));
+}
+
 .draftBadge {
   border-radius: 16px;
   background-color: black;
@@ -92,7 +96,7 @@
 }
 
 .postPreview {
-  max-width: 600px;
+  max-width: 800px;
   margin: 10px auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 }
@@ -155,7 +159,7 @@
 .post {
   max-width: calc(600px + 10%);
   margin: 0 auto;
-  padding: 5%;
+  padding: 0 5% 5% 5%;
 }
 
 .post :global(hr) {
